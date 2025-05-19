@@ -37,41 +37,62 @@ The introduction of Agent Mode in GitHub Copilot represents a significant step f
 - Interact with the VS Code environment
 - Handle project-specific tasks
 
-This advancement transformed Copilot from a passive code suggestion tool into an active development partner that can help manage your entire development workflow. Here are some powerful capabilities and how to use them:
+This advancement transformed Copilot from a passive code suggestion tool into an active development partner that can help manage your entire development workflow. Here are some powerful capabilities and example interactions:
 
-1. **Build and Test Automation**
-   - Capability: `Trigger Maven builds with specific profiles`
-   - Example: "Run mvn clean install with the 'production' profile for my project"
-   
-   - Capability: `Execute JUnit test suites`
-   - Example: "Execute all JUnit tests in the UserServiceTest class"
-   
-   - Capability: `Run code quality tools`
-   - Example: "Run ESLint on all JavaScript files in the src directory"
-   - Example: "Start a local Sonar analysis with coverage and security scan"
+#### 1. Build and Test Automation
 
-2. **Documentation and Release Management**
-   - Capability: `Generate release documentation`
-   - Example: "Generate release notes for changes between tag v1.2.0 and v1.3.0"
-   
-   - Capability: `Technical documentation`
-   - Example: "Create a technical design document for the authentication service"
-   - Example: "Update the API documentation in Confluence for the new endpoints"
+Trigger Maven builds with specific profiles:
+```
+"Run mvn clean install with the 'production' profile for my project"
+```
 
-3. **Project Management Integration**
-   - Capability: `JIRA ticket management`
-   - Example: "Create a JIRA ticket for the memory leak bug we found in the login service"
-   - Example: "Convert all TODO comments in AuthService.java to JIRA tickets"
-   
-   - Capability: `Sprint management`
-   - Example: "Update the status of PROJ-123 to 'In Review' and add a comment with the PR link"
-   - Example: "Show me all JIRA tickets assigned to me that are blocking the current sprint"
+Execute JUnit test suites:
+```
+"Execute all JUnit tests in the UserServiceTest class"
+```
 
-4. **Cross-Repository Operations**
-   - Capability: `Multi-repo analysis`
-   - Example: "Check if the latest changes in the API repo are compatible with our client library"
-   - Example: "Run integration tests across both the frontend and backend repositories"
+Run code quality tools:
+```
+"Run ESLint on all JavaScript files in the src directory"
+"Start a local Sonar analysis with coverage and security scan"
+```
 
+#### 2. Documentation and Release Management
+
+Generate release documentation:
+```
+"Generate release notes for changes between tag v1.2.0 and v1.3.0"
+```
+
+Technical documentation:
+```
+"Create a technical design document for the authentication service"
+"Update the API documentation in Confluence for the new endpoints"
+```
+
+#### 3. Project Management Integration
+
+JIRA ticket management:
+```
+"Create a JIRA ticket for the memory leak bug we found in the login service"
+"Convert all TODO comments in AuthService.java to JIRA tickets"
+```
+
+Sprint management:
+```
+"Update the status of PROJ-123 to 'In Review' and add a comment with the PR link"
+"Show me all JIRA tickets assigned to me that are blocking the current sprint"
+```
+
+#### 4. Cross-Repository Operations
+
+Multi-repo analysis:
+```
+"Check if the latest changes in the API repo are compatible with our client library"
+"Run integration tests across both the frontend and backend repositories"
+```
+
+Try the above prompts in VSCode Agent mode and see the magic. 
 While these capabilities demonstrate the power of Agent Mode, they highlight a crucial challenge: the need for external API integrations. Each of these tasks requires:
 - Authentication with external services (JIRA, Confluence, Sonar)
 - Managing different API versions and endpoints
